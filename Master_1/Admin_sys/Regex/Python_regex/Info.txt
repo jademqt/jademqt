@@ -1,0 +1,6 @@
+Dans un premier temps regarder et comprendre le fichier TP_regex_sous_python.
+Ce fichier reprend les commandes et les librairies utilisées pour faire des RegEx avec Python.
+
+Puis exercice (A FAIRE) :
+Lire le fichier koln.csv et donner le nombre de véhicules entre la ligne 12 et 13.
+Réponse attendue : environ 2000 (à vérifier)
