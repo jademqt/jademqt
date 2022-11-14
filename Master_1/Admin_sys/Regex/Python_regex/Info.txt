@@ -1,5 +1,7 @@
 Dans un premier temps regarder et comprendre le fichier TP_regex_sous_python.
 Ce fichier reprend les commandes et les librairies utilisées pour faire des RegEx avec Python.
+Attention ce fichier est en html. Pour le visualiser sans le télécharger suivre ce lien : 
+https://htmlpreview.github.io/?https://github.com/jademqt/jademqt/blob/main/Master_1/Admin_sys/Regex/Python_regex/TP_regex_sous_python.html
 
 Puis exercice (A FAIRE) :
 Lire le fichier koln.csv et donner le nombre de véhicules entre la ligne 12 et 13.
