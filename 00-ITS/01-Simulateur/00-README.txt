@@ -1,5 +1,5 @@
-Date : 08/03/2023
-Prochain document : Le prochain document portera sur une simulation qui combine OMNeT++ et SUMO.
+Date : 28/03/2023
+Prochain document : Le prochain document portera sur l'implémentation du protocole GeoNetworking dans OMNeT++.
 
 Explications :
 
@@ -14,5 +14,7 @@ Explications :
 		- NED
 		- Modules (simples, sous-modules, composés)
 04 --> Explication du rôle de Veins et de SUMO. Prise en main de SUMO à travers de nombreux exemples (cf. conférence SUMO 2020)
-
+05 --> Intégration des données générées avec SUMO dans OMNeT++
+		- Fichiers de configurations
+		- Exemple 
  
