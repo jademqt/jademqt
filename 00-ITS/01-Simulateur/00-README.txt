@@ -1,5 +1,6 @@
-Date : 28/03/2023
-Prochain document : Le prochain document portera sur l'implémentation du protocole GeoNetworking dans OMNeT++.
+Date : 30/03/2023
+Prochain document : 	- Fin de la rédaction de l'installation d'ARTERY (et donc d'OMNeT, SUMO) sur Linux.
+				- Le prochain document portera sur l'implémentation du protocole GeoNetworking dans OMNeT++.
 
 Explications :
 
@@ -17,4 +18,10 @@ Explications :
 05 --> Intégration des données générées avec SUMO dans OMNeT++
 		- Fichiers de configurations
 		- Exemple 
+06 --> Installation d'ARTERY (Framework pour simuler le protocole GeoNetworking) sur Linux
+		- Installation d'OMNeT++ sur Linux
+		- Installation des librairies nécessaire à ARTERY
+		- A VENIR :
+			- Installation de SUMO sur Linux
+			- Fin de la mise en place d'ARTERY sur Linux
  
