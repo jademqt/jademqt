@@ -5,14 +5,16 @@ from cryptography import x509
 from cryptography.x509.oid import NameOID
 from cryptography.hazmat.primitives.serialization import Encoding, PrivateFormat, NoEncryption, PublicFormat
 
-# Generate a private key
+# Générer une clé privée
 private_key = rsa.generate_private_key(
     public_exponent=65537,
     key_size=2048,
     backend=default_backend()
 )
 
-# Define the subject name for the CSR
+# Définir le nom du sujet pour le CSR
+# Constructeur de la classe x509
+# Pour rappel x509 est une norme pour la gestion des certificats numériques utilisés pour l'authentification et l'établissement de connexions sécurisées entre les entités
 subject = x509.Name([
     x509.NameAttribute(NameOID.COUNTRY_NAME, "FR"),
     x509.NameAttribute(NameOID.STATE_OR_PROVINCE_NAME, "Marne"),
@@ -21,7 +23,8 @@ subject = x509.Name([
     x509.NameAttribute(NameOID.COMMON_NAME, "www.RT0802.com"),
 ])
 
-# Create the CSR builder
+# Créer le constructeur de CSR
+# l.28 spécifie le nom du sujet de la CSR
 builder = x509.CertificateSigningRequestBuilder().subject_name(
     subject
 ).add_extension(
@@ -30,15 +33,17 @@ builder = x509.CertificateSigningRequestBuilder().subject_name(
     x509.SubjectAlternativeName([x509.DNSName(u"www.example.com")]), critical=False,
 )
 
-# Sign the CSR with the private key
+# Signer la CSR avec la clef privée : 
+# lorsque toutes les extensions et les informations de sujet ont été ajoutées, la CSR peut être signée en utilisant la méthode sign()
 csr = builder.sign(
     private_key, hashes.SHA256(), 
 )
 
-# Serialize the private key, public key, and CSR to PEM-encoded strings
+# Sérialiser la clé privée, la clé publique et la CSR en chaînes encodées PEM
+
 private_pem = private_key.private_bytes(
-    encoding=Encoding.PEM,
-    format=PrivateFormat.PKCS8,
+    encoding=Encoding.PEM, #Privacy-Enhanced Mail, format de codage de données largement utilisé pour les clefs dans le milieu de la cryptographie
+    format=PrivateFormat.PKCS8, #La représentation de la clef doit être formatée selon la norme PKCS#8 (Public-Key Cryptography Standards #8)
     encryption_algorithm=NoEncryption(),
 )
 

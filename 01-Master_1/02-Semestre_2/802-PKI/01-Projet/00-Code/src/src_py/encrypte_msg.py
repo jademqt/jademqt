@@ -12,22 +12,24 @@ else:
     message = sys.argv[1].encode('utf-8')
     secret_path = sys.argv[2]
 
-    # Load the secret
+    # Charger le secret
     with open(secret_path, "rb") as f:
         secret = f.read()
 
-    # Create a Cipher object for AES encryption using the secret
+    # Créer un objet Cipher pour le chiffrement AES en utilisant le secret
+    # AES est un algorithme de chiffrement de blocs qui peut être utilisé avec différents modes de chiffrement, comme ici ECB.
+    # ECB est un mode de chiffrement qui spécifie comment les données doivent être divisées en blocs et comment les blocs doivent être chiffrés
     cipher = Cipher(algorithms.AES(secret), modes.ECB(), backend=default_backend())
 
-    # Add PKCS7 padding to the message
+    # Ajoute des données PKCS7 au message (padding)
     padder = padding.PKCS7(128).padder()
     padded_message = padder.update(message) + padder.finalize()
 
-    # Encrypt the padded message using the Cipher object
+    # Cryptage du message (avec ECB)"complété" à l'aide de l'objet Cipher
     encryptor = cipher.encryptor()
     ciphertext = encryptor.update(padded_message) + encryptor.finalize()
 
-    # Write the encrypted message to a file
+    # Écrire le message crypté dans un fichier
     chemin = "/Fichiers/a_envoyer_secu.txt"
     with open(chemin, "wb") as outfile:
         outfile.write(ciphertext)

@@ -8,15 +8,15 @@ from cryptography.hazmat.primitives.serialization import Encoding, PrivateFormat
 
 # Generate a private key
 private_key = rsa.generate_private_key(
-    public_exponent=65537,
+    public_exponent=65537, #recommandé car il petit, impair et peut être calculé rapidement
     key_size=2048,
-    backend=default_backend()
+    backend=default_backend() #Généralement OpenSSL
 )
 
-# Extract the public key
+# Extrait la clef publique
 public_key = private_key.public_key()
 
-# Define the subject name
+# Définit l'auteur
 subject = x509.Name([
     x509.NameAttribute(NameOID.COUNTRY_NAME, "FR"),
     x509.NameAttribute(NameOID.STATE_OR_PROVINCE_NAME, "Marne"),
@@ -25,11 +25,11 @@ subject = x509.Name([
     x509.NameAttribute(NameOID.COMMON_NAME, "www.RT0802.com"),
 ])
 
-# Define the validity period
+# Donne la période de validité
 not_valid_before = datetime.datetime.utcnow()
 not_valid_after = not_valid_before + datetime.timedelta(days=365)
 
-# Create a self-signed X.509 certificate builder
+# Création d'un certificat builder auto signé  X.509
 builder = x509.CertificateBuilder().subject_name(
     subject
 ).issuer_name(
@@ -46,16 +46,16 @@ builder = x509.CertificateBuilder().subject_name(
     x509.BasicConstraints(ca=False, path_length=None), critical=True,
 )
 
-# Sign the X.509 certificate with the private key
+# Signe le certificat X.509 avec le clef privée
 certificate = builder.sign(
     private_key, hashes.SHA256(), 
 )
 
-# Serialize the private key, public key, and X.509 certificate to PEM-encoded strings
+# Sérialiser la clé privée, la clef publique et le certificat X.509 en chaînes encodées PEM 
 private_pem = private_key.private_bytes(
-    encoding=Encoding.PEM,
-    format=PrivateFormat.PKCS8,
-    encryption_algorithm=NoEncryption(),
+    encoding=Encoding.PEM,   #Privacy-Enhanced Mail, format de codage de données largement utilisé pour les clefs dans le milieu de la cryptographie
+    format=PrivateFormat.PKCS8, #La représentation de la clef doit être formatée selon la norme PKCS#8 (Public-Key Cryptography Standards #8)
+    encryption_algorithm=NoEncryption(), #aucun algorithme de chiffrement ne doit être utilisé pour protéger la clef privée
 )
 
 public_pem = public_key.public_bytes(
@@ -65,14 +65,14 @@ public_pem = public_key.public_bytes(
 
 cert_pem = certificate.public_bytes(Encoding.PEM)
 
-# Write the PEM-encoded private key to a file
+# Enregistrer la clef privée codée en PEM dans un fichier
 with open("/Fichiers/secure/Serveur/private_key.pem", "wb") as f:
     f.write(private_pem)
 
-# Write the PEM-encoded public key to a file
+# Enregistrer la clef publique codée en PEM dans un fichier
 with open("/Fichiers/secure/Serveur/public_key.pem", "wb") as f:
     f.write(public_pem)
 
-# Write the PEM-encoded certificate to a file
+# Enregistrer le certificat codé en PEM dans un fichier
 with open("/Fichiers/secure/Serveur/certificate.pem", "wb") as f:
     f.write(cert_pem)

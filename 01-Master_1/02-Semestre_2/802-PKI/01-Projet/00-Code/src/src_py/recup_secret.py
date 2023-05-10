@@ -25,17 +25,21 @@ else :
             password=None,
             backend=backend
         )
+    # Les données chiffrées sont passées en entrée de la méthode decrypt
+    # Le schéma de padding OAEP est également passée en entrée pour spécifier comment les données sont chiffrées. 
+    # Rappel OAEP : technique de padding utilisée pour sécuriser les opérations de chiffrement asymétrique (ex RSA).
+    # Ce padding permet d'ajouter des données aléatoires à un message avant le chiffrement, pour rendre le chiffrement plus résistant aux attaques.
     key = private_key.decrypt(
-        encrypted_data[-private_key.key_size // 8:],
+        encrypted_data[-private_key.key_size // 8:], # extrait la partie des données chiffrées qui correspond à la taille de la clef privée. Cela permet de supprimer les octets de remplissage qui ont été ajoutés lors du chiffrement avec OAEP.
         padding.OAEP(
-             mgf=padding.MGF1(algorithm=hashes.SHA256()),
-            algorithm=hashes.SHA256(),
-            label=None
+             mgf=padding.MGF1(algorithm=hashes.SHA256()), # MGF1 algorithme de masquage de génération de masque (MGF) pour produire des masques aléatoires.
+            algorithm=hashes.SHA256(), # algo de hachage pour calculer les fonctions de hachage utilisées dans le schéma de padding
+            label=None # permet d'ajouter des données supplémentaires aux fonctions de hachage
         )
     )
 
     # 3. Déchiffrer en faisant l'inverse d'AES 128
-    encrypted_secret = encrypted_data[:-private_key.key_size // 8]
+    encrypted_secret = encrypted_data[:-private_key.key_size // 8] # correspond à la valeur d'initialisation (IV) qui a été placée avant les données chiffrées.
     cipher = Cipher(algorithms.AES(key), modes.ECB(), backend=backend)
     decryptor = cipher.decryptor()
     secret = decryptor.update(encrypted_secret) + decryptor.finalize()
