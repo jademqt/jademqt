@@ -1,0 +1,10 @@
+<RDV>
+    <Rendez_vous>
+        <Id_rdv>55000</Id_rdv>
+        <Lieu_depart>0</Lieu_depart>
+        <Lieu_arrivee>0</Lieu_arrivee>
+        <Heure_depart>00:00</Heure_depart>
+        <Heure_arrivee>00:00</Heure_arrivee>
+        <Id_groupe>0</Id_groupe>
+    </Rendez_vous>
+</RDV>

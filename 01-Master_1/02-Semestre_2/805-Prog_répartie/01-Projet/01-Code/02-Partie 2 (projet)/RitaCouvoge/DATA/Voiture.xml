@@ -1,0 +1,6 @@
+<Voitures>
+    <Voiture>
+        <Id_voiture>22000</Id_voiture>
+        <Nbr_max_place>4</Nbr_max_place>
+    </Voiture>
+</Voitures>

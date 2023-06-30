@@ -1,0 +1,26 @@
+<Inscriptions_conduite>
+    <Inscription_conduite>
+        <Id_inscription_conduite>60000</Id_inscription_conduite>
+        <Id_utilisateur>0</Id_utilisateur>
+        <Id_rdv>0</Id_rdv>
+        <Lundi>false</Lundi>
+        <Mardi>false</Mardi>
+        <Mercredi>false</Mercredi>
+        <Jeudi>false</Jeudi>
+        <Vendredi>false</Vendredi>
+        <Samedi>false</Samedi>
+        <Dimanche>false</Dimanche>
+    </Inscription_conduite>
+    <Inscription_conduite>
+        <Id_inscription_conduite>1</Id_inscription_conduite>
+        <Id_utilisateur>88000</Id_utilisateur>
+        <Id_rdv>55001</Id_rdv>
+        <Lundi>true</Lundi>
+        <Mardi>true</Mardi>
+        <Mercredi>false</Mercredi>
+        <Jeudi>false</Jeudi>
+        <Vendredi>false</Vendredi>
+        <Samedi>false</Samedi>
+        <Dimanche>false</Dimanche>
+    </Inscription_conduite>
+</Inscriptions_conduite>

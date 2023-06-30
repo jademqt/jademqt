@@ -1,0 +1,39 @@
+<Groupes>
+    <Groupe>
+        <Id_groupe>11000</Id_groupe>
+        <Nom_groupe>0</Nom_groupe>
+        <Descriptif_groupe>0</Descriptif_groupe>
+        <Id_administrateur>0</Id_administrateur>
+        <Liste_conducteurs>
+            <Id_utilisateur>0</Id_utilisateur>
+        </Liste_conducteurs>
+        <Liste_passagers>
+            <Id_utilisateur>0</Id_utilisateur>
+        </Liste_passagers>
+        <Tab_trajets>
+            <Id_trajet_final>0</Id_trajet_final>
+        </Tab_trajets>
+        <Liste_demandes>
+            <Id_utilisateur>0</Id_utilisateur>
+        </Liste_demandes>
+    </Groupe>
+    <Groupe>
+        <Id_groupe>11001</Id_groupe>
+        <Nom_groupe>Amigos</Nom_groupe>
+        <Descriptif_groupe>Amis pour la vie</Descriptif_groupe>
+        <Id_administrateur>88000</Id_administrateur>
+        <Liste_conducteurs>
+            <Id_utilisateur>0</Id_utilisateur>
+        </Liste_conducteurs>
+        <Liste_passagers>
+            <Id_utilisateur>0</Id_utilisateur>
+            <Id_utilisateur>88001</Id_utilisateur>
+        </Liste_passagers>
+        <Tab_trajets>
+            <Id_trajet_final>0</Id_trajet_final>
+        </Tab_trajets>
+        <Liste_demandes>
+            <Id_utilisateur>0</Id_utilisateur>
+        </Liste_demandes>
+    </Groupe>
+</Groupes>

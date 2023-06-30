@@ -1,0 +1,26 @@
+<Inscriptions_passager>
+    <Inscription_passager>
+        <Id_inscription_passager>70001</Id_inscription_passager>
+        <Id_utilisateur>88000</Id_utilisateur>
+        <Id_rdv>55002</Id_rdv>
+        <Lundi>false</Lundi>
+        <Mardi>false</Mardi>
+        <Mercredi>false</Mercredi>
+        <Jeudi>false</Jeudi>
+        <Vendredi>false</Vendredi>
+        <Samedi>true</Samedi>
+        <Dimanche>true</Dimanche>
+    </Inscription_passager>
+    <Inscription_passager>
+        <Id_inscription_passager>70000</Id_inscription_passager>
+        <Id_utilisateur>0</Id_utilisateur>
+        <Id_rdv>0</Id_rdv>
+        <Lundi>false</Lundi>
+        <Mardi>false</Mardi>
+        <Mercredi>false</Mercredi>
+        <Jeudi>false</Jeudi>
+        <Vendredi>false</Vendredi>
+        <Samedi>false</Samedi>
+        <Dimanche>false</Dimanche>
+    </Inscription_passager>
+</Inscriptions_passager>

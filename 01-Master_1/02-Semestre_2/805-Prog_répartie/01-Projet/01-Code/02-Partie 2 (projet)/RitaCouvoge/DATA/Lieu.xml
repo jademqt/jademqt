@@ -1,0 +1,23 @@
+<Lieux>
+    <Lieu>
+        <Id_lieu>90001</Id_lieu>
+        <Code_postal>33000</Code_postal>
+        <Adresse>146 rue Léo Saignat</Adresse>
+        <Ville>Bordeaux</Ville>
+        <Description>Faculté des sciences de Bordeaux.</Description>
+    </Lieu>
+    <Lieu>
+        <Id_lieu>90000</Id_lieu>
+        <Code_postal>33000</Code_postal>
+        <Adresse>9 Rue du Fort-Dauphin</Adresse>
+        <Ville>Bordeaux</Ville>
+        <Description>Maison des Covoge.</Description>
+    </Lieu>
+    <Lieu>
+        <Id_lieu>90002</Id_lieu>
+        <Code_postal>33680</Code_postal>
+        <Adresse>Avenue du Gressier</Adresse>
+        <Ville>Le Porge</Ville>
+        <Description>Plage du Porge.</Description>
+    </Lieu>
+</Lieux>

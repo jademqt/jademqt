@@ -1,0 +1,78 @@
+<Attributions>
+
+    <Attribution>
+        <Id_rdv>55000</Id_rdv>
+        <Id_attribution>33000</Id_attribution>
+        <Jours_semaine>
+            <Lundi>
+                <Id_conducteur>88000</Id_conducteur>
+                <Passagers_attribues>
+                    <Id_passager>88001</Id_passager>
+                </Passagers_attribues>
+            </Lundi>
+
+            <Mardi>
+            </Mardi>
+
+            <Mercredi>
+                <Id_conducteur>88000</Id_conducteur>
+                <Passagers_attribues>
+                    <Id_passager>88001</Id_passager>
+                </Passagers_attribues>
+            </Mercredi>
+
+            <Jeudi>
+                <Id_conducteur>88000</Id_conducteur>
+                <Passagers_attribues>
+                    <Id_passager>88001</Id_passager>
+                </Passagers_attribues>
+            </Jeudi>
+
+            <Vendredi>
+                <Id_conducteur>88000</Id_conducteur>
+                <Passagers_attribués>
+                    <Id_passager>88001</Id_passager>
+                </Passagers_attribués>
+            </Vendredi>
+
+            <Samedi>
+            </Samedi>
+
+            <Dimanche>
+            </Dimanche>
+        </Jours_semaine>  
+    </Attribution>
+
+
+    <Attribution>
+        <Id_rdv>55001</Id_rdv>
+        <Id_attribution>33001</Id_attribution>
+        <Jours_semaine>
+            <Lundi>
+                <Id_conducteur>88000</Id_conducteur>
+                <Passagers_attribues>
+                    <Id_passager>88001</Id_passager>
+                </Passagers_attribues>
+            </Lundi>
+
+            <Mardi>
+            </Mardi>
+
+            <Mercredi>
+            </Mercredi>
+
+            <Jeudi>
+            </Jeudi>
+
+            <Vendredi>
+            </Vendredi>
+
+            <Samedi>
+            </Samedi>
+
+            <Dimanche>
+            </Dimanche>
+        </Jours_semaine>  
+    </Attribution>
+
+</Attributions>

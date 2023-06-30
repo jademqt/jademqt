@@ -1,0 +1,21 @@
+<RDV>
+
+    <Rendez_vous>
+        <Id_rdv>55000</Id_rdv>
+        <Lieu_depart>90000</Lieu_depart>
+        <Lieu_arrivee>90001</Lieu_arrivee>
+        <Heure_depart>07:30</Heure_depart>
+        <Heure_arrivee>08:00</Heure_arrivee>
+        <Id_groupe>11000</Id_groupe>	  
+    </Rendez_vous>
+
+    <Rendez_vous>
+        <Id_rdv>55001</Id_rdv>
+        <Lieu_depart>90001</Lieu_depart>
+        <Lieu_arrivee>90000</Lieu_arrivee>
+        <Heure_depart>16:30</Heure_depart>
+        <Heure_arrivee>17:00</Heure_arrivee>
+        <Id_groupe>11000</Id_groupe>
+    </Rendez_vous>
+
+</RDV>

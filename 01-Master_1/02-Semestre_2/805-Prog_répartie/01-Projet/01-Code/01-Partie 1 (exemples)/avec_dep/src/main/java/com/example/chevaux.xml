@@ -1,0 +1,27 @@
+<!-- Données récupérées du site https://www.ifce.fr/ -->
+<chevaux>
+    <cheval>
+        <nom>BLUEMEISTER</nom>
+        <sire>23325513F</sire>
+        <race>Pur-sang</race>
+        <sexe>Femelle</sexe>
+        <robe>Alezan</robe>
+        <date_naissance>2023-03-22</date_naissance>
+    </cheval>
+    <cheval>
+        <nom>IDOLE</nom>
+        <sire>52823284L</sire>
+        <race>ONC</race>
+        <sexe>Femelle</sexe>
+        <robe>Bai</robe>
+        <date_naissance>2018-05-15</date_naissance>
+    </cheval>
+    <cheval>
+        <nom>IBARS</nom>
+        <sire>18474661W</sire>
+        <race>Comtois</race>
+        <sexe>Male</sexe>
+        <robe>Alezan</robe>
+        <date_naissance>2018-04-10</date_naissance>
+    </cheval>
+</chevaux>

@@ -1,0 +1,9 @@
+<Liens>
+    <Lien>
+        <Id_Lien>12000</Id_Lien>
+        <Id_conducteur>0</Id_conducteur>
+        <Passagers_attribues>
+            <Id_passager>0</Id_passager>
+        </Passagers_attribues>
+    </Lien>
+</Liens>

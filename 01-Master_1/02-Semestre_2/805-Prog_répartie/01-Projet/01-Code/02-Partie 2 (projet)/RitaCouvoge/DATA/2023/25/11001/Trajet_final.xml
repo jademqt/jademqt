@@ -1,0 +1,26 @@
+<Trajet_finaux>
+    <Trajet_final>
+        <Id_trajet_final>0</Id_trajet_final>
+        <Trajet_lundi>
+            <Id_attribution>0</Id_attribution>
+        </Trajet_lundi>
+        <Trajet_mardi>
+            <Id_attribution>0</Id_attribution>
+        </Trajet_mardi>
+        <Trajet_mercredi>
+            <Id_attribution>0</Id_attribution>
+        </Trajet_mercredi>
+        <Trajet_jeudi>
+            <Id_attribution>0</Id_attribution>
+        </Trajet_jeudi>
+        <Trajet_vendredi>
+            <Id_attribution>0</Id_attribution>
+        </Trajet_vendredi>
+        <Trajet_samedi>
+            <Id_attribution>0</Id_attribution>
+        </Trajet_samedi>
+        <Trajet_dimanche>
+            <Id_attribution>0</Id_attribution>
+        </Trajet_dimanche>
+    </Trajet_final>
+</Trajet_finaux>

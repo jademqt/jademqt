@@ -1,0 +1,107 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+   <!-- CONNEXION -->
+  <servlet>
+      <servlet-name>Connexion</servlet-name>
+      <servlet-class>com.ritacouvoge.servlet.Connexion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>Connexion</servlet-name>
+      <url-pattern>/connexion</url-pattern>
+  </servlet-mapping>
+
+   <!-- HOME -->
+  <servlet>
+      <servlet-name>Home</servlet-name>
+      <servlet-class>com.ritacouvoge.servlet.Home</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>Home</servlet-name>
+      <url-pattern>/home</url-pattern>
+  </servlet-mapping>
+
+  <!-- CREER COMPTE -->
+  <servlet>
+      <servlet-name>CreerCompte</servlet-name>
+      <servlet-class>com.ritacouvoge.servlet.CreerCompte</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>CreerCompte</servlet-name>
+      <url-pattern>/creer_compte</url-pattern>
+  </servlet-mapping>
+
+  <!-- GROUPE -->
+  <servlet>
+      <servlet-name>GroupeServlet</servlet-name>
+      <servlet-class>com.ritacouvoge.servlet.Groupe</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>GroupeServlet</servlet-name>
+      <url-pattern>/groupe</url-pattern>
+  </servlet-mapping>
+
+  <!-- CREER GROUPE -->
+  <servlet>
+      <servlet-name>CreerGroupeServlet</servlet-name>
+      <servlet-class>com.ritacouvoge.servlet.CreerGroupe</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>CreerGroupeServlet</servlet-name>
+      <url-pattern>/creer_groupe</url-pattern>
+  </servlet-mapping>
+
+  <!-- REJOINDRE GROUPE -->
+  <servlet>
+      <servlet-name>RejoindreGroupeServlet</servlet-name>
+      <servlet-class>com.ritacouvoge.servlet.RejoindreGroupe</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>RejoindreGroupeServlet</servlet-name>
+      <url-pattern>/rejoindre_groupe</url-pattern>
+  </servlet-mapping>
+
+   <!-- ADMIN -->
+  <servlet>
+      <servlet-name>AdminServlet</servlet-name>
+      <servlet-class>com.ritacouvoge.servlet.Admin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>AdminServlet</servlet-name>
+      <url-pattern>/admin</url-pattern>
+  </servlet-mapping>
+
+  <!-- GERER REPARTITION -->
+  <servlet>
+      <servlet-name>GererRepartitionServlet</servlet-name>
+      <servlet-class>com.ritacouvoge.servlet.GererRepartition</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>GererRepartitionServlet</servlet-name>
+      <url-pattern>/gerer_repartition</url-pattern>
+  </servlet-mapping>
+
+  <!-- INSCRIPTION -->
+  <servlet>
+      <servlet-name>InscriptionServlet</servlet-name>
+      <servlet-class>com.ritacouvoge.servlet.Inscription</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>InscriptionServlet</servlet-name>
+      <url-pattern>/inscription</url-pattern>
+  </servlet-mapping>
+
+  <!-- RDV INSCRIPTION -->
+  <servlet>
+      <servlet-name>RDVInscriptionServlet</servlet-name>
+      <servlet-class>com.ritacouvoge.servlet.RdvInscription</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>RDVInscriptionServlet</servlet-name>
+      <url-pattern>/rdv_inscription</url-pattern>
+  </servlet-mapping>
+
+</web-app>
+

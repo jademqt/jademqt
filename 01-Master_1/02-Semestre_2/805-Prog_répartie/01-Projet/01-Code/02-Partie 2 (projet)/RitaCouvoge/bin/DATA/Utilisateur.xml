@@ -1,0 +1,47 @@
+<Utilisateurs>
+
+<Utilisateur>
+    <Pseudonyme>CaptainRita</Pseudonyme>
+    <Id_utilisateur>88000</Id_utilisateur>
+    <Mot_de_Passe>mdp_a_hacher</Mot_de_Passe>
+    <Nom_utilisateur>Covoge</Nom_utilisateur>
+    <Prénom_utilisateur>Rita</Prénom_utilisateur>
+    <Date_naissance>01-01-2000</Date_naissance>
+    <Conducteur>true</Conducteur>
+    <Détient_permis>true</Détient_permis>
+    <Id_voiture>22000</Id_voiture>
+    <Passager>true</Passager>
+    <Administrateur>
+        <Id_groupe>11000</Id_groupe>
+    </Administrateur>
+    <Groupe>
+        <Id_groupe>11000</Id_groupe>
+        <Id_groupe>11001</Id_groupe>
+    </Groupe>
+    <Nbr_de_conduite>0</Nbr_de_conduite>
+    <Nbr_de_fois_passager>0</Nbr_de_fois_passager>
+</Utilisateur>
+
+    <Utilisateur>
+        <Pseudonyme>AldoCar</Pseudonyme>
+        <Id_utilisateur>88001</Id_utilisateur>
+        <Mot_de_Passe>mdp_a_hacher</Mot_de_Passe>
+        <Nom_utilisateur>Covoge</Nom_utilisateur>
+        <Prénom_utilisateur>Aldo</Prénom_utilisateur>
+        <Date_naissance>01-01-2002</Date_naissance>
+        <Conducteur>false</Conducteur>
+        <Détient_permis>false</Détient_permis>
+        <Id_voiture>00000</Id_voiture>
+        <Passager>true</Passager>
+        <Administrateur>
+            <Id_groupe>11001</Id_groupe>
+        </Administrateur>
+        <Groupe>
+            <Id_groupe>11000</Id_groupe>
+            <Id_groupe>11001</Id_groupe>
+        </Groupe>
+        <Nbr_de_conduite>0</Nbr_de_conduite>
+        <Nbr_de_fois_passager>0</Nbr_de_fois_passager>
+    </Utilisateur>  
+  
+</Utilisateurs>

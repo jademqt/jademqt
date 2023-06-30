@@ -1,0 +1,47 @@
+<Groupes>
+
+    <Groupe>
+        <Id_groupe>11000</Id_groupe>
+        <Nom_groupe>Les covoiturages de Rita</Nom_groupe>
+        <Descriptif_groupe>Organisation de covoiturages pour aller à l'école.</Descriptif_groupe>
+        <Id_administrateur>8800</Id_administrateur>
+
+        <Liste_conducteurs>
+            <Id_utilisateur>8800</Id_utilisateur>
+        </Liste_conducteurs>
+
+        <Liste_passagers>
+            <Id_utilisateur>88001</Id_utilisateur>
+            <Id_utilisateur>88000</Id_utilisateur>
+        </Liste_passagers>
+
+        <Tab_trajets>
+            <Id_trajet_final>44000</Id_trajet_final>    
+        </Tab_trajets>
+
+        <Liste_demandes>
+        </Liste_demandes>
+    </Groupe>
+
+    <Groupe>
+        <Id_groupe>11001</Id_groupe>
+        <Nom_groupe>Go avec Aldo</Nom_groupe>
+        <Descriptif_groupe>Go à la plages !</Descriptif_groupe>
+        <Id_administrateur>88001</Id_administrateur>
+
+        <Liste_conducteurs>
+        </Liste_conducteurs>
+
+        <Liste_passagers>
+            <Id_utilisateur>88001</Id_utilisateur>
+        </Liste_passagers>
+
+        <Tab_trajets>   
+        </Tab_trajets>
+
+        <Liste_demandes>
+            <Id_utilisateur>88000</Id_utilisateur>
+        </Liste_demandes>
+    </Groupe>
+
+</Groupes>
