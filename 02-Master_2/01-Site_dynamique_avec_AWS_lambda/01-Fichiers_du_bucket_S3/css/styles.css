@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+/* CSS document for cafe web site*/
+
+.center {
+  text-align: center;
+ }
+
+.noBorder {
+	border-style: none;
+ }
+.main_votes{
+  display : inline-flex;
+}
+
+td.main_votes {
+  height: 150px;
+}
+.bodyStyle {
+	width: 960px;
+	margin: 0 auto;
+	overflow: auto;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'sans-serif';
+	font-size: 15px;
+}
+
+.mainHeader {
+  	font-family: "Comic Sans MS", cursive;
+	font-size: 60px;
+	line-height: 66px;
+	color: #000;
+	text-align: center;
+}
+.cursiveText {
+	font-family: "Comic Sans MS", cursive;
+	font-size: 18px;
+	line-height: 24px;
+	color: #000;
+	text-align: center;
+}
+
+/* Navigation bar styles */
+
+/* Add a black background color to the top navigation */
+
+.topnav {
+  background-color: orange;
+  height: 31px;
+  text-align: center;
+}
+
+/* Style the links inside the navigation bar */
+
+.topnav a {
+  color: white;
+  text-align: center;
+  vertical-align:middle;
+  font-size: 20px;
+  padding: 0 16px;
+  text-decoration: none;
+}
+
+/* Change the color of links on hover */
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+
+.topnav a.active {
+  background-color: aquamarine;
+  color: black;
+}
+
+/* Centered section inside the top navigation */
+
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  left: 50%;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Election Latte Art</title>
+	<link rel="stylesheet" href="css\styles.css">
+
+	<style>
+        .table_vote tr:hover{
+            color: orange;
+        }
+		.prix, .table_vote th{
+			font-weight: bold;
+			font-style: italic;
+			color: orange;
+		}
+		td { 
+			text-align : center;		
+		}
+		.table_vote {
+			width : 90%;			
+			margin-left : 5%;
+		}
+		.main_votes {
+			display : inline-flex;
+			margin-top : 3%;
+			margin-left : 5%;
+            width: 90%;
+		}
+		.main_votes td {
+			height : 150px;
+		}
+	</style>
+
+</head>
+
+<body class="bodyStyle">
+
+	<div id="header" class="mainHeader">
+		<hr>
+		<div class="center">Meilleur Latte Art 2024</div>
+	</div>
+	<br>
+	<hr>
+	<div class="topnav">
+		<a href="index.html">Accueil</a>
+		<a href="votes.html">Etat des votes</a>
+		<a href="candidats.html">Candidats</a>
+		<a href="voter.html">Voter</a>
+	</div>
+
+    <div class='main_votes'>      
+
+        <table class="table_vote">
+            <tr>
+            <th></th>
+            <th>Candidat</th>
+            <th>Latte Art</th>
+            <th>Nombre de votes</th>
+            <th>Pourcentage</th>
+            </tr>
+            <tbody id="vote-results">
+            <!-- Les résultats seront ajoutés ici -->
+            </tbody>
+        </table>
+    </div>
+ 
+
+    <div id="Copyright" class="center">
+        <h5>2023, Gregory L-M et Jade M, Master 2 DAS</h5>
+    </div>
+
+    <script>
+    // Appel à la fonction Lambda pour récupérer les résultats des votes
+    document.addEventListener('DOMContentLoaded', () => {
+        fetch('https://ygwkzchiykxi5zgsljfrug2qha0xkfsz.lambda-url.eu-west-3.on.aws/')
+            .then(response => response.json())
+            .then(data => {
+                const voteResults = document.getElementById('vote-results');
+                let position = 1;
+                data.forEach(row => {
+                    const tableRow = document.createElement('tr');
+                    const positionText = getPositionText(position); 
+                    tableRow.innerHTML = `
+                    <td class="prix">${positionText}</td>
+                    <td>${row.Prenom}</td>
+                    <td><img src="${row.Chemin_photo_latte}" width="150"></td>
+                    <td>${row.nb_votes}</td>
+                    <td>${row.pourcentage}%</td>
+                    `;
+                    voteResults.appendChild(tableRow);
+                    position++;
+                });
+            })
+            .catch(error => {
+                console.error('Erreur lors de la récupération des résultats :', error);
+                document.getElementById("vote-results").innerHTML = "Erreur lors de la récupération des données.";
+            });
+    })
+
+    function getPositionText(position) {
+        if (position === 1) {
+            return '<img src="/images/prix/premier.jpg" width="50">';
+        } else if (position === 2) {
+            return '<img src="/images/prix/deuxième.jpg" width="50">';
+        } else if (position === 3) {
+            return '<img src="/images/prix/troisieme.jpg" width="50">';
+        } else {
+            const lastDigit = position % 10;
+            const lastTwoDigits = position % 100;
+
+            if (lastDigit === 1 && lastTwoDigits !== 11) {
+                return position + 'ier';
+            } else if (lastDigit === 2 && lastTwoDigits !== 12) {
+                return position + 'ième';
+            } else if (lastDigit === 3 && lastTwoDigits !== 13) {
+                return position + 'ième';
+            } else {
+                return position + 'ième';
+            }
+        }
+    }
+  </script>
+
+</body>
+</html>

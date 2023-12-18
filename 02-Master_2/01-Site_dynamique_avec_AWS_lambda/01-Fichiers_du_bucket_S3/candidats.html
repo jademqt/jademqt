@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Election Latte Art</title>
+	<link rel="stylesheet" href="css\styles.css">
+</head>
+
+<body class="bodyStyle">
+
+	<div id="header" class="mainHeader">
+		<hr>
+		<div class="center">Meilleur Latte Art 2024</div>
+	</div>
+	<br>
+	<hr>
+	<div class="topnav">
+		<a href="index.html">Accueil</a>
+		<a href="votes.html">Etat des votes</a>
+		<a href="candidats.html">Candidats</a>
+		<a href="voter.html">Voter</a>
+	</div>
+
+    <table id="table-container" cellspacing="30">
+        <!-- Le contenu du tableau sera ajouté ici -->
+    </table>
+      
+    <script>
+    // Fonction pour récupérer les données des candidats depuis la fonction Lambda
+ 
+    document.addEventListener('DOMContentLoaded', () => {
+    fetch('https://ygwkzchiykxi5zgsljfrug2qha0xkfsz.lambda-url.eu-west-3.on.aws/', {})
+    .then(response => response.json())
+    .then(data => {
+        if (data && data.length > 0) {
+            let tableHTML = '';
+            data.forEach(row => {
+            tableHTML += '<tr>';
+            tableHTML += '<td>';
+            tableHTML += '<img src="' + row.Chemin_photo_profil + '" width="160" alt="Photo" />';
+            tableHTML += '<p style="text-align: center; margin: 0;">' + row.Prenom + '</p>';
+            tableHTML += '</td>';
+            tableHTML += '<td>';
+            tableHTML += '<img src="' + row.Chemin_photo_latte + '" width="190" alt="Photo" />';
+            tableHTML += '</td>';
+            tableHTML += '<td>';
+            tableHTML += row.Presentation + '<br>';
+            tableHTML += '</td>';
+            tableHTML += '</tr>';
+            });
+            document.getElementById("table-container").innerHTML = tableHTML;
+        } else {
+            document.getElementById("table-container").innerHTML = "0 résultats";
+        }
+        })
+        .catch(error => {
+        console.error('Erreur lors de la récupération des données :', error);
+        document.getElementById("table-container").innerHTML = "Erreur lors de la récupération des données.";
+        });
+    });
+      
+      </script>
+
+    <div id="Copyright" class="center">
+        <h5>2023, Gregory L-M et Jade M, Master 2 DAS</h5>
+    </div>
+
+</body>
+</html>
